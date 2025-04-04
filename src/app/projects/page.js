@@ -51,7 +51,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold mb-12 text-center text-purple-500">🚀 My Projects</h1>
+      <h1 className="text-4xl font-bold mb-12 text-center text-purple-500">My Projects</h1>
       <div className="grid gap-12 sm:grid-cols-1 md:grid-cols-2">
         {projects.map((proj, idx) => (
           <Card
