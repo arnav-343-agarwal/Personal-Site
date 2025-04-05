@@ -8,7 +8,7 @@ import Image from 'next/image';
 const certifications = [
   {
     title: "NPTEL – Design and Analysis of Algorithms",
-    subtitle: "Topper – Top 5%",
+    subtitle: "Course Topper – Top 5%",
     description:
       "Ranked in the top 5% nationally in a rigorous algorithmic course conducted by IIT. Covered complexity analysis, divide and conquer, dynamic programming, and more. Demonstrates strong grasp of algorithm design and optimization.",
     proofLink: "https://example.com/nptel-proof",
