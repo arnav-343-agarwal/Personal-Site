@@ -159,13 +159,43 @@ export default function SkillsPage() {
     <div className="px-6 py-10 lg:px-20 space-y-10">
       <h1 className="text-4xl font-bold text-center text-white mb-6">My Skills & Expertise</h1>
       <TooltipProvider>
-        <div className="space-y-12">
-          <SectionCard title={webDev.title} categories={webDev.categories} />
-          <SectionCard title={problemSolving.title} categories={problemSolving.categories} />
-          <SectionCard title={languages.title} categories={languages.categories} />
-          <SectionCard title={mlDl.title} categories={mlDl.categories} />
+        <div className="space-y-16">
+  
+          {/* Web Development Section */}
+          <div className="space-y-4">
+            <SectionCard title={webDev.title} categories={webDev.categories} />
+            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
+              With multiple full-stack projects under my belt, I’ve developed a strong grip on frontend and backend technologies. From crafting elegant UIs using Tailwind & React to building scalable APIs with Node.js and Express, I’m fully confident in delivering production-ready web apps.
+            </p>
+          </div>
+  
+          {/* Problem Solving Section */}
+          <div className="space-y-4">
+            <SectionCard title={problemSolving.title} categories={problemSolving.categories} />
+            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
+              DSA is my daily workout. With 350+ questions solved on LeetCode and deep dives into topics like DP, Trees, and Graphs, I’ve built a solid intuition for problem solving. It’s not just about getting the solution — it’s about thinking like an engineer.
+            </p>
+          </div>
+  
+          {/* Programming Languages Section */}
+          <div className="space-y-4">
+            <SectionCard title={languages.title} categories={languages.categories} />
+            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
+              I’ve coded in C, C++, Java, Python, and more — but C++ is my weapon of choice. Be it system-level programming or high-level scripting, I pick the best language for the task and write clean, efficient, and maintainable code every time.
+            </p>
+          </div>
+  
+          {/* ML/DL Section */}
+          <div className="space-y-4">
+            <SectionCard title={mlDl.title} categories={mlDl.categories} />
+            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
+              As a research intern on ML projects like Stable Diffusion optimization, I’ve worked hands-on with TensorFlow and PyTorch. I love applying AI in areas like CV and NLP, and I’m deeply fascinated by how machines can learn and adapt.
+            </p>
+          </div>
+  
         </div>
       </TooltipProvider>
     </div>
   );
+  
 }
