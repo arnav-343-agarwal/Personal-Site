@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 import {
   Home,
   Mail,
@@ -12,18 +12,18 @@ import {
   Trophy,
   BookOpen,
   Download,
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const navItems = [
-  { label: 'Home', href: '/', icon: Home },
-  { label: 'Projects', href: '/projects', icon: Folder },
-  { label: 'Experience', href: '/experience', icon: Briefcase },
-  { label: 'Skills', href: '/skills', icon: Settings },
-  { label: 'Achievements', href: '/achievements', icon: Trophy },
-  { label: 'Certifications', href: '/certifications', icon: BookOpen },
-  { label: 'Contact', href: '/contact', icon: Mail },
+  { label: "Home", href: "/", icon: Home },
+  { label: "Projects", href: "/projects", icon: Folder },
+  { label: "Experience", href: "/experience", icon: Briefcase },
+  { label: "Skills", href: "/skills", icon: Settings },
+  { label: "Achievements", href: "/achievements", icon: Trophy },
+  { label: "Certifications", href: "/certifications", icon: BookOpen },
+  { label: "Contact", href: "/contact", icon: Mail },
 ];
 
 export default function Navbar() {
@@ -32,7 +32,9 @@ export default function Navbar() {
   return (
     <header className="w-full fixed top-0 z-50 bg-black border-b border-neutral-800 shadow-md">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-        <h1 className="text-xl font-semibold text-white tracking-wide">Arnav</h1>
+        <h1 className="text-xl font-semibold text-white tracking-wide">
+          Arnav
+        </h1>
 
         <nav className="flex items-center gap-6 flex-wrap justify-center">
           {navItems.map(({ label, href, icon: Icon }) => (
@@ -40,8 +42,8 @@ export default function Navbar() {
               key={href}
               href={href}
               className={cn(
-                'flex items-center gap-2 text-base font-medium text-gray-400 hover:text-white transition',
-                pathname === href && 'text-white font-semibold'
+                "flex items-center gap-2 text-base font-medium text-gray-400 hover:text-white transition",
+                pathname === href && "text-white font-semibold"
               )}
             >
               <Icon className="w-5 h-5" />
@@ -51,14 +53,13 @@ export default function Navbar() {
         </nav>
 
         {/* Resume Button */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Button asChild className="bg-white text-black hover:bg-gray-200 transition">
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Button
+            asChild
+            className="bg-white text-black hover:bg-gray-200 transition"
+          >
             <a
-              href="/resume.pdf" // replace with actual resume path
-              download
+              href="https://drive.google.com/file/d/YOUR_RESUME_ID/view"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
