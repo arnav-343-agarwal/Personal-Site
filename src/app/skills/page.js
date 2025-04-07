@@ -156,7 +156,12 @@ const SectionCard = ({ title, categories }) => (
 
 export default function SkillsPage() {
   return (
-    <div className="px-6 py-10 lg:px-20 space-y-10">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
+      <div className="px-6 py-10 lg:px-20 space-y-10">
       <h1 className="text-4xl font-bold text-center text-white mb-6">My Skills & Expertise</h1>
       <TooltipProvider>
         <div className="space-y-16">
@@ -196,6 +201,10 @@ export default function SkillsPage() {
         </div>
       </TooltipProvider>
     </div>
+    </motion.div>
+
   );
   
 }
+
+
