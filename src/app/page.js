@@ -27,14 +27,37 @@ export default function HomePage() {
             transition={{ duration: 1.5 }}
             className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black text-white px-4"
           >
-            <motion.img
-              src="/home/download.jpg"
-              alt="Cartoon Developer"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1.1, opacity: 1 }}
-              transition={{ duration: 1.2 }}
-              className="w-60 md:w-72 mb-6"
-            />
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black text-white px-4"
+            >
+              {/* Background Image with fade effect */}
+              <div className="absolute inset-0">
+                <Image
+                  src="/home/download.jpg"
+                  alt="Background"
+                  layout="fill"
+                  objectFit="cover"
+                  className="opacity-20"
+                />
+              </div>
+
+              {/* Text Content */}
+              <motion.div
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="relative z-10 text-center"
+              >
+                <h1 className="text-4xl md:text-5xl font-bold mb-2">
+                  Welcome!
+                </h1>
+                <p className="text-xl text-purple-400">Explore Arnav's World</p>
+              </motion.div>
+            </motion.div>
 
             <motion.div
               initial={{ y: 30, opacity: 0 }}
