@@ -5,12 +5,18 @@ import { Separator } from '@/components/ui/separator';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
 import {
-  FaReact, FaNodeJs, FaPython, FaGitAlt, FaDatabase, FaRobot, FaBrain, FaJava, FaCode
+  FaReact, FaNodeJs, FaPython, FaGitAlt, FaDatabase,
+  FaRobot, FaBrain, FaJava, FaCode,
+  FaLayerGroup, FaStream, FaProjectDiagram, FaSitemap,
+  FaNetworkWired, FaPuzzlePiece,
+  FaChartLine, FaTree, FaDivide, FaChartBar,
+  FaBalanceScale, FaEye, FaRecycle
 } from 'react-icons/fa';
+
 import {
   SiJavascript, SiTypescript, SiMongodb, SiTailwindcss,
   SiRedux, SiRedis, SiExpress, SiNextdotjs,
-  SiTensorflow, SiPytorch, SiC, SiCplusplus
+  SiTensorflow, SiPytorch, SiC, SiCplusplus,SiJupyter, SiHuggingface
 } from 'react-icons/si';
 import { CgWebsite } from 'react-icons/cg';
 import { FiExternalLink } from 'react-icons/fi';
@@ -53,12 +59,12 @@ const problemSolving = {
     {
       title: "Core Topics",
       skills: [
-        { name: "Linked List" },
-        { name: "Stack" },
-        { name: "Queue" },
-        { name: "Binary Trees" },
-        { name: "Graphs" },
-        { name: "Dynamic Programming" },
+        { name: "Linked List", icon: FaProjectDiagram, color: "text-orange-400" },
+        { name: "Stack", icon: FaLayerGroup, color: "text-purple-400" },
+        { name: "Queue", icon: FaStream, color: "text-yellow-400" },
+        { name: "Binary Trees", icon: FaSitemap, color: "text-green-400" },
+        { name: "Graphs", icon: FaNetworkWired, color: "text-blue-400" },
+        { name: "Dynamic Programming", icon: FaPuzzlePiece, color: "text-pink-400" },
       ]
     },
     {
@@ -84,6 +90,7 @@ const problemSolving = {
   ]
 };
 
+
 const languages = {
   title: "Programming Languages",
   categories: [
@@ -105,28 +112,32 @@ const mlDl = {
   title: "Machine Learning / Deep Learning",
   categories: [
     {
-      title: "Technologies",
+      title: "Algorithms",
+      skills: [
+        { name: "Linear Regression", icon: FaChartLine, color: "text-blue-300" },
+        { name: "Logistic Regression", icon: FaChartBar, color: "text-pink-300" },
+        { name: "Decision Trees", icon: FaTree, color: "text-green-500" },
+        { name: "SVM", icon: FaDivide, color: "text-red-400" },
+        { name: "Naive Bayes", icon: FaBalanceScale, color: "text-yellow-400" },
+        { name: "ANN", icon: FaBrain, color: "text-purple-400" },
+        { name: "CNN", icon: FaEye, color: "text-cyan-400" },
+        { name: "RNN", icon: FaRecycle, color: "text-orange-400" },
+      ],
+    },
+    {
+      title: "Frameworks & Tools",
       skills: [
         { name: "Python", icon: FaPython, color: "text-yellow-300" },
         { name: "TensorFlow", icon: SiTensorflow, color: "text-orange-400" },
         { name: "PyTorch", icon: SiPytorch, color: "text-red-500" },
-      ],
-    },
-    {
-      title: "Applications",
-      skills: [
-        { name: "Linear Regression" },
-        { name: "Logistic Regression" },
-        { name: "Decision Trees" },
-        { name: "Naive Bayes" },
-        { name: "SVM" },
-        { name: "ANN / CNN / RNN" },
-        { name: "Hugging Face" },
-        { name: "Jupyter Notebook" },
+        { name: "Hugging Face", icon: SiHuggingface, color: "text-yellow-400" },
+        { name: "Jupyter", icon: SiJupyter, color: "text-orange-300" },
       ],
     },
   ],
 };
+
+
 
 const SectionCard = ({ title, categories }) => (
   <motion.div
