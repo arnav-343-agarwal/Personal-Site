@@ -19,8 +19,8 @@ import { motion } from "framer-motion";
 const navItems = [
   { label: "Home", href: "/", icon: Home },
   { label: "Projects", href: "/projects", icon: Folder },
-  { label: "Experience", href: "/experience", icon: Briefcase },
   { label: "Skills", href: "/skills", icon: Settings },
+  { label: "Experience", href: "/experience", icon: Briefcase },
   { label: "Achievements", href: "/achievements", icon: Trophy },
   { label: "Certifications", href: "/certifications", icon: BookOpen },
   { label: "Contact", href: "/contact", icon: Mail },
