@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Separator } from '@/components/ui/separator';
+import Image from 'next/image';
 
 const experiences = [
   {
@@ -9,14 +10,14 @@ const experiences = [
     role: 'Research Intern – ML/AI (Stable Diffusion Optimization)',
     duration: 'Jan 2024 – Aug 2024',
     description: `Collaborated with Samsung engineers and faculty to improve Stable Diffusion models using DeepCache. Researched multiple academic papers and learned various machine learning and deep learning algorithms to focus on memory-efficient inference and optimizing computational graphs for better real-world performance.`,
-    image: '/experience/Samsung logo.jpg', // Make sure this image exists in public/images/
+    image: '/experience/Samsung logo.jpg',
   },
   {
     title: 'SRM IST Official Placement Issue Web App',
     role: 'Lead Developer',
     duration: 'Jan 2025 – Present',
     description: `Currently developing SRM’s official placement issue management system for students using Next.js, TypeScript, Express, and MongoDB. The app supports secure logins, detailed issue submissions, admin-side filtering, Excel downloads, and resolution tracking.`,
-    image: '/experience/srm logo.png', // Make sure this image exists in public/images/
+    image: '/experience/srm logo.png',
   },
 ];
 
@@ -31,10 +32,12 @@ const ExperienceCard = ({ title, role, duration, description, image }) => (
     className="flex flex-col md:flex-row gap-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl shadow-md p-6 hover:ring-1 hover:ring-white/20 transition-all"
   >
     <div className="w-full md:w-1/3 flex justify-center items-center">
-      <img
+      <Image
         src={image}
         alt={title}
-        className="h-28 object-contain rounded-xl"
+        width={120}
+        height={120}
+        className="object-contain rounded-xl h-28 w-auto"
       />
     </div>
     <div className="flex-1">

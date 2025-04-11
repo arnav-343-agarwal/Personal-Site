@@ -1,36 +1,45 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Separator } from '@/components/ui/separator';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const achievements = [
   {
-    title: 'Hackrush 1.0 Hackathon Runner-Up',
+    title: "Hackrush 1.0 Hackathon Runner-Up",
     description:
-      'Participated in Hackrush 1.0, a 36-hour hackathon, and secured runner-up position among 100+ teams. Built a real-time platform solving social good problems with modern tech stack and scalable backend.',
-    image: '/achievements/hackrush.jpg',
-    proofLink: 'https://drive.google.com/file/d/1_O7g80cVWpJpdB08RkaW18-g2ZgGqOtE/view?usp=sharing',
+      "Participated in Hackrush 1.0, a 36-hour hackathon, and secured runner-up position among 100+ teams. Built a real-time platform solving social good problems with modern tech stack and scalable backend.",
+    image: "/achievements/hackrush.jpg",
+    proofLink:
+      "https://drive.google.com/file/d/1_O7g80cVWpJpdB08RkaW18-g2ZgGqOtE/view?usp=sharing",
   },
   {
-    title: 'JEE Mains+Advanced Achiever',
+    title: "JEE Mains+Advanced Achiever",
     description:
-      'Cracked one of the toughest engineering entrance exams in India. This demonstrates deep analytical thinking, mathematical ability, and perseverance. Scored 96.85 percentile in JEE Mains and qualified Advanced.',
-    image: '/achievements/jee image.jpg',
-    proofLink: 'https://drive.google.com/file/d/1hc6cdzN9lqpm9gQcMpGLsAyAkE2SdF_j/view?usp=sharing',
+      "Cracked one of the toughest engineering entrance exams in India. This demonstrates deep analytical thinking, mathematical ability, and perseverance. Scored 96.85 percentile in JEE Mains and qualified Advanced.",
+    image: "/achievements/jee image.jpg",
+    proofLink:
+      "https://drive.google.com/file/d/1hc6cdzN9lqpm9gQcMpGLsAyAkE2SdF_j/view?usp=sharing",
   },
   {
-    title: 'Problem-Solving Expert (400+ Qs)',
+    title: "Problem-Solving Expert (400+ Qs)",
     description:
-      'Solved over 400+ problems across platforms like Leetcode, GFG, and HackerRank. Strong grasp over algorithms, data structures, and time-space optimization. Regular contributor and contest participant.',
-    image: '/achievements/leetcode image.png',
-    proofLink: 'https://leetcode.com/u/Arnav343Agarwal/',
+      "Solved over 400+ problems across platforms like Leetcode, GFG, and HackerRank. Strong grasp over algorithms, data structures, and time-space optimization. Regular contributor and contest participant.",
+    image: "/achievements/leetcode image.png",
+    proofLink: "https://leetcode.com/u/Arnav343Agarwal/",
     isLeetcode: true,
   },
 ];
 
-const AchievementCard = ({ title, description, image, proofLink, isLeetcode }) => (
+const AchievementCard = ({
+  title,
+  description,
+  image,
+  proofLink,
+  isLeetcode,
+}) => (
   <motion.div
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
@@ -39,7 +48,13 @@ const AchievementCard = ({ title, description, image, proofLink, isLeetcode }) =
     transition={{ duration: 0.4 }}
     className="flex flex-col md:flex-row items-start gap-6 bg-white/5 p-6 rounded-xl border border-white/10 shadow-md hover:ring-1 hover:ring-white/20"
   >
-    <img src={image} alt={title} className="w-24 h-24 object-contain rounded-md" />
+    <Image
+      src={image}
+      alt={title}
+      width={96}
+      height={96}
+      className="object-contain rounded-md"
+    />
     <div className="flex-1 space-y-3">
       <h2 className="text-2xl font-bold text-white">{title}</h2>
       <Separator className="bg-white/10" />

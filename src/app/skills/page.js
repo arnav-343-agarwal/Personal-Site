@@ -1,25 +1,53 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Separator } from '@/components/ui/separator';
-import { TooltipProvider } from '@/components/ui/tooltip';
-
-import {
-  FaReact, FaNodeJs, FaPython, FaGitAlt, FaDatabase,
-  FaRobot, FaBrain, FaJava, FaCode,
-  FaLayerGroup, FaStream, FaProjectDiagram, FaSitemap,
-  FaNetworkWired, FaPuzzlePiece,
-  FaChartLine, FaTree, FaDivide, FaChartBar,
-  FaBalanceScale, FaEye, FaRecycle
-} from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { Separator } from "@/components/ui/separator";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 import {
-  SiJavascript, SiTypescript, SiMongodb, SiTailwindcss,
-  SiRedux, SiRedis, SiExpress, SiNextdotjs,
-  SiTensorflow, SiPytorch, SiC, SiCplusplus,SiJupyter, SiHuggingface
-} from 'react-icons/si';
-import { CgWebsite } from 'react-icons/cg';
-import { FiExternalLink } from 'react-icons/fi';
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaGitAlt,
+  FaDatabase,
+  FaRobot,
+  FaBrain,
+  FaJava,
+  FaCode,
+  FaLayerGroup,
+  FaStream,
+  FaProjectDiagram,
+  FaSitemap,
+  FaNetworkWired,
+  FaPuzzlePiece,
+  FaChartLine,
+  FaTree,
+  FaDivide,
+  FaChartBar,
+  FaBalanceScale,
+  FaEye,
+  FaRecycle,
+} from "react-icons/fa";
+
+import {
+  SiJavascript,
+  SiTypescript,
+  SiMongodb,
+  SiTailwindcss,
+  SiRedux,
+  SiRedis,
+  SiExpress,
+  SiNextdotjs,
+  SiTensorflow,
+  SiPytorch,
+  SiC,
+  SiCplusplus,
+  SiJupyter,
+  SiHuggingface,
+} from "react-icons/si";
+import { CgWebsite } from "react-icons/cg";
+import { FiExternalLink } from "react-icons/fi";
 
 const webDev = {
   title: "Web Development",
@@ -59,13 +87,21 @@ const problemSolving = {
     {
       title: "Core Topics",
       skills: [
-        { name: "Linked List", icon: FaProjectDiagram, color: "text-orange-400" },
+        {
+          name: "Linked List",
+          icon: FaProjectDiagram,
+          color: "text-orange-400",
+        },
         { name: "Stack", icon: FaLayerGroup, color: "text-purple-400" },
         { name: "Queue", icon: FaStream, color: "text-yellow-400" },
         { name: "Binary Trees", icon: FaSitemap, color: "text-green-400" },
         { name: "Graphs", icon: FaNetworkWired, color: "text-blue-400" },
-        { name: "Dynamic Programming", icon: FaPuzzlePiece, color: "text-pink-400" },
-      ]
+        {
+          name: "Dynamic Programming",
+          icon: FaPuzzlePiece,
+          color: "text-pink-400",
+        },
+      ],
     },
     {
       title: "Online Judges",
@@ -73,23 +109,22 @@ const problemSolving = {
         {
           name: "LeetCode (350+ Qs)",
           icon: "/icons/leetcode.png",
-          link: "https://leetcode.com/u/Arnav343Agarwal/"
+          link: "https://leetcode.com/u/Arnav343Agarwal/",
         },
         {
           name: "GeeksForGeeks",
           icon: "/icons/gfg icon.jpg",
-          link: "https://www.geeksforgeeks.org/user/agarwalar9hq8/"
+          link: "https://www.geeksforgeeks.org/user/agarwalar9hq8/",
         },
         {
           name: "HackerRank",
           icon: "/icons/HackerRank Icon.webp",
-          link: "https://leetcode.com/u/Arnav343Agarwal/"
-        }
-      ]
-    }
-  ]
+          link: "https://leetcode.com/u/Arnav343Agarwal/",
+        },
+      ],
+    },
+  ],
 };
-
 
 const languages = {
   title: "Programming Languages",
@@ -103,9 +138,9 @@ const languages = {
         { name: "Java", icon: FaJava, color: "text-blue-500" },
         { name: "Python", icon: FaPython, color: "text-yellow-300" },
         { name: "SQL", icon: FaDatabase, color: "text-blue-300" },
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };
 
 const mlDl = {
@@ -114,8 +149,16 @@ const mlDl = {
     {
       title: "Algorithms",
       skills: [
-        { name: "Linear Regression", icon: FaChartLine, color: "text-blue-300" },
-        { name: "Logistic Regression", icon: FaChartBar, color: "text-pink-300" },
+        {
+          name: "Linear Regression",
+          icon: FaChartLine,
+          color: "text-blue-300",
+        },
+        {
+          name: "Logistic Regression",
+          icon: FaChartBar,
+          color: "text-pink-300",
+        },
         { name: "Decision Trees", icon: FaTree, color: "text-green-500" },
         { name: "SVM", icon: FaDivide, color: "text-red-400" },
         { name: "Naive Bayes", icon: FaBalanceScale, color: "text-yellow-400" },
@@ -137,8 +180,6 @@ const mlDl = {
   ],
 };
 
-
-
 const SectionCard = ({ title, categories }) => (
   <motion.div
     whileHover={{ scale: 1.01 }}
@@ -150,12 +191,27 @@ const SectionCard = ({ title, categories }) => (
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
       {categories.map((category, idx) => (
         <div key={idx}>
-          <h3 className="text-lg font-semibold text-white mb-3">{category.title}</h3>
+          <h3 className="text-lg font-semibold text-white mb-3">
+            {category.title}
+          </h3>
           <div className="flex flex-wrap gap-6">
-            {category.skills.map((skill, i) => (
+            {category.skills.map((skill, i) =>
               skill.icon?.startsWith?.("/") ? (
-                <a key={i} href={skill.link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
-                  <img src={skill.icon} className="w-10 h-10 rounded" alt={skill.name} />
+                <a
+                  key={i}
+                  href={skill.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2"
+                >
+                  <Image
+                    src={skill.icon}
+                    alt={skill.name}
+                    width={40}
+                    height={40}
+                    className="rounded"
+                  />
+
                   <div className="flex items-center gap-1 text-white text-sm font-medium">
                     {skill.name}
                     <FiExternalLink className="text-white/70 text-xs" />
@@ -163,11 +219,15 @@ const SectionCard = ({ title, categories }) => (
                 </a>
               ) : (
                 <div key={i} className="flex flex-col items-center gap-2">
-                  {skill.icon && <skill.icon className={`text-5xl ${skill.color}`} />}
-                  <p className="text-white text-sm font-medium text-center">{skill.name}</p>
+                  {skill.icon && (
+                    <skill.icon className={`text-5xl ${skill.color}`} />
+                  )}
+                  <p className="text-white text-sm font-medium text-center">
+                    {skill.name}
+                  </p>
                 </div>
               )
-            ))}
+            )}
           </div>
         </div>
       ))}
@@ -180,20 +240,31 @@ export default function SkillsPage() {
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="px-6 py-10 lg:px-20 space-y-10">
-        <h1 className="text-4xl font-bold text-center text-white mb-6">My Skills & Expertise</h1>
+        <h1 className="text-4xl font-bold text-center text-white mb-6">
+          My Skills & Expertise
+        </h1>
         <TooltipProvider>
           <div className="space-y-16">
             <div className="space-y-4">
-              <SectionCard title={webDev.title} categories={webDev.categories} />
+              <SectionCard
+                title={webDev.title}
+                categories={webDev.categories}
+              />
             </div>
             <div className="space-y-4">
-              <SectionCard title={problemSolving.title} categories={problemSolving.categories} />
+              <SectionCard
+                title={problemSolving.title}
+                categories={problemSolving.categories}
+              />
             </div>
             <div className="space-y-4">
-              <SectionCard title={languages.title} categories={languages.categories} />
+              <SectionCard
+                title={languages.title}
+                categories={languages.categories}
+              />
             </div>
             <div className="space-y-4">
               <SectionCard title={mlDl.title} categories={mlDl.categories} />
