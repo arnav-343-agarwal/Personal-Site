@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -25,7 +26,8 @@ export default function ContactPage() {
     const templateId = 'your_template_id';
     const userId = 'your_user_id';
 
-    emailjs.send(serviceId, templateId, formData, userId)
+    emailjs
+      .send(serviceId, templateId, formData, userId)
       .then((response) => {
         console.log('Message sent successfully:', response);
         alert('Your message has been sent successfully!');
@@ -38,29 +40,89 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen px-6 py-12 lg:px-24 bg-black text-white">
+    <motion.div
+      className="min-h-screen px-6 py-12 lg:px-24 bg-black text-white"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="max-w-2xl mx-auto space-y-12">
-        {/* Social Links Section */}
-        <div className="space-y-6">
-          <h1 className="text-4xl font-bold text-center">Contact Me</h1>
-          <div className="flex flex-col items-center space-y-4">
-            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-              <FaLinkedin className="text-blue-500 text-2xl" />
-              <span>LinkedIn: your-linkedin-profile</span>
-            </a>
-            <a href="mailto:your-email@gmail.com" className="flex items-center space-x-2">
-              <FaEnvelope className="text-red-500 text-2xl" />
-              <span>Email: your-email@gmail.com</span>
-            </a>
-            <a href="https://www.instagram.com/your-instagram-handle" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
-              <FaInstagram className="text-pink-500 text-2xl" />
-              <span>Instagram: @your-instagram-handle</span>
-            </a>
-          </div>
-        </div>
+        {/* Intro Section */}
+        <motion.div
+          className="space-y-6 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <h1 className="text-4xl font-bold">Contact Me</h1>
+          <p className="text-gray-400">
+            I'm always open to connect, collaborate, and explore new ideas.
+            Whether it's for work, mentorship, or just a chat—feel free to reach out!
+          </p>
+        </motion.div>
 
-        {/* Contact Form Section */}
-        <div className="bg-white/5 p-8 rounded-xl shadow-lg backdrop-blur-md border border-white/10">
+        {/* Social Links */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
+          {[
+            {
+              icon: FaLinkedin,
+              color: 'text-blue-500',
+              label: 'LinkedIn',
+              link: 'https://www.linkedin.com/in/arnav-agarwal-b6334a247/',
+              handle: 'arnav-agarwal-b6334a247',
+            },
+            {
+              icon: FaEnvelope,
+              color: 'text-red-500',
+              label: 'Email',
+              link: 'mailto:agarwalarnav2003@gmail.com',
+              handle: 'agarwalarnav2003@gmail.com',
+            },
+            {
+              icon: FaInstagram,
+              color: 'text-pink-500',
+              label: 'Instagram',
+              link: 'https://www.instagram.com/arnav343agarwal/',
+              handle: 'arnav343agarwal',
+            },
+          ].map((item, idx) => (
+            <motion.a
+              key={idx}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center p-4 bg-white/5 rounded-lg shadow-md hover:bg-white/10 transition-all border border-white/10 space-y-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <item.icon className={`${item.color} text-3xl`} />
+              <div className="text-center text-sm">{item.handle}</div>
+            </motion.a>
+          ))}
+        </motion.div>
+
+        {/* Contact Form */}
+        <motion.div
+          className="bg-white/5 p-8 rounded-xl shadow-lg backdrop-blur-md border border-white/10"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
           <h2 className="text-3xl font-semibold mb-6 text-center">Send a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -98,12 +160,15 @@ export default function ContactPage() {
                 className="bg-black/20 text-white placeholder:text-gray-400"
               />
             </div>
-            <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-110">
+            <Button
+              type="submit"
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:brightness-110"
+            >
               Send Message
             </Button>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
