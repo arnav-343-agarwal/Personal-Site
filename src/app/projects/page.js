@@ -11,41 +11,41 @@ const projects = [
     title: "Carpooling System",
     desc: "A real-time ride-sharing web app allowing users to offer or request carpooling with OTP-based ride confirmation and robust auth.",
     image: "/projects/Carpool Image.png",
-    live: "https://carpooling-demo.vercel.app",
+    live: "https://carpool-theta.vercel.app/",
     github: "https://github.com/yourusername/carpooling-system",
-    stack: ["Node.js", "MongoDB", "EJS", "Bootstrap", "JWT"]
+    stack: ["Next.js", "MongoDB", "Tailwind", "JWT","Leaflet"]
   },
   {
     title: "MyCamp",
     desc: "A campsite booking platform with user reviews, image uploads, and full CRUD operations built using modern web dev stack.",
     image: "/projects/Camp Image.jpg",
-    live: "https://mycamp.vercel.app",
+    live: "https://arnavcamps.onrender.com/",
     github: "https://github.com/yourusername/mycamp",
-    stack: ["Express.js", "MongoDB", "Cloudinary", "Mapbox", "Bootstrap"]
+    stack: ["Express.js", "MongoDB", "Cloudinary", "Mapbox", "Node.js"]
   },
   {
     title: "Link-Lite",
-    desc: "Custom URL shortener with analytics, QR code generation, and a minimal interface. Built with performance in mind.",
+    desc: "Custom URL shortener with analytics, easy copy/delete functionality, and a minimal interface. Built with performance in mind.",
     image: "/projects/Link Lite Image.jpg",
     live: "https://linklite.vercel.app",
     github: "https://github.com/yourusername/link-lite",
-    stack: ["Next.js", "Tailwind", "MongoDB", "QRCode"]
+    stack: ["React.js", "TailwindCSS", "Express.js", "Hooks"]
   },
   {
     title: "Turbo Search",
     desc: "A lightning-fast search engine project leveraging efficient indexing algorithms for instant search response.",
     image: "/projects/Turbo Seacrh Image.png",
-    live: "https://turbosearch.vercel.app",
+    live: "https://turbo-search-7b7hd9d4o-arnav-agarwals-projects-abdc176f.vercel.app/",
     github: "https://github.com/yourusername/turbo-search",
-    stack: ["React", "Node.js", "Express", "Search Algorithms"]
+    stack: ["Cloudflare Workers", "Redis", "Hono", "Next.js"]
   },
   {
     title: "2FA System",
-    desc: "Secure Two-Factor Authentication system with email OTP & session management for login verification.",
+    desc: "Secure Two-Factor Authentication system with Time based OTP & session management for login verification.",
     image: "/projects/Two Fa Image.jpg",
     live: "https://2fa-demo.vercel.app",
     github: "https://github.com/yourusername/two-factor-auth",
-    stack: ["Express.js", "Nodemailer", "MongoDB", "JWT"]
+    stack: ["Express.js", "Passport", "Context Management", "JWT"]
   }
 ];
 
