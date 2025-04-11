@@ -111,7 +111,7 @@ export default function HomePage() {
               <p className="text-lg text-gray-300 mt-4">
                 I craft bold, beautiful, and blazing-fast web experiences. As a
                 passionate developer, I’ve built some amazing projects using the
-                MERN stack, Next.js, and more — combining creativity with clean,
+                MERN stack, Next.js, Hono and more — combining creativity with clean,
                 scalable code. Dive in and explore what I’ve made!
               </p>
 
@@ -144,7 +144,7 @@ export default function HomePage() {
               I’m a 3rd-year Computer Science student at SRM Institute of
               Science and Technology with a strong foundation in full-stack
               development and a love for problem-solving through DSA. From
-              modern web apps using MERN, Next.js, and Hono to experimenting
+              modern web apps using infamous tech stack to experimenting
               with scalable backend systems, I enjoy turning complex ideas into
               elegant digital solutions.
             </p>

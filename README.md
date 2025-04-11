@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Personal Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website! Crafted with 💖 using **Next.js**, **Tailwind CSS**,**Shadcn UI**, and **Framer Motion**, this site is a reflection of my journey as a Full-stack Web developer and a problem solver.
 
-First, run the development server:
+![Screenshot](./public/readmescreen.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🧠 About Me
+
+Hi, I’m **Arnav**, a Computer Science undergrad from SRMIST. I’m passionate about building modern web apps, solving real-world problems, and learning cutting-edge tech. Whether it’s crafting a pixel-perfect UI or building efficient backend systems — I love doing it all!
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ Next.js & React
+- 🎨 Tailwind CSS & Shadcn UI
+- 🎞️ Framer Motion  
+- 💬 Custom Chatbot  
+- 🧠 Typewriter Effect  
+- 🌐 Deployment: Vercel / Netlify  
+
+---
+
+## ✨ Features
+
+- 🔥 Smooth animated intro screen  
+- 🎯 Dynamic typewriter effect for roles  
+- 📱 Fully responsive layout  
+- 🤖 Chatbot integration  
+- 📂 Project & experience showcase  
+- 🧭 Clean, scalable code  
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── components/
+│   └── ChatBot.js
+├── pages/
+│   ├── index.tsx (Home)
+│   └── projects.tsx, experience.tsx
+├── public/
+│   └── home/download.jpg, Arnav Image.jpg
+├── styles/
+├── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🧪 Getting Started Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/your-username/arnav-portfolio.git
+cd arnav-portfolio
+npm install
+npm run dev
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Live Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> [Click here to view live](https://my-live-site-url.com)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🤝 Connect with Me
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 💼 [LinkedIn](https://www.linkedin.com/in/arnav-agarwal-b6334a247/)
+- 🐙 [GitHub](https://github.com/arnav-343-agarwal)
+- 📧 agarwalarnav2003@gmail.com
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Made with 💜 by **Arnav Agarwal**
