@@ -12,7 +12,7 @@ const projects = [
     desc: "A real-time ride-sharing web app allowing users to offer or request carpooling with OTP-based ride confirmation and robust auth.",
     image: "/projects/Carpool Image.png",
     live: "https://carpool-theta.vercel.app/",
-    github: "https://github.com/yourusername/carpooling-system",
+    github: "https://github.com/arnav-343-agarwal/Carpool.git",
     stack: ["Next.js", "MongoDB", "Tailwind", "JWT","Leaflet"]
   },
   {
@@ -20,16 +20,8 @@ const projects = [
     desc: "A campsite booking platform with user reviews, image uploads, and full CRUD operations built using modern web dev stack.",
     image: "/projects/Camp Image.jpg",
     live: "https://arnavcamps.onrender.com/",
-    github: "https://github.com/yourusername/mycamp",
+    github: "https://github.com/arnav-343-agarwal/MyCamp-Complete.git",
     stack: ["Express.js", "MongoDB", "Cloudinary", "Mapbox", "Node.js"]
-  },
-  {
-    title: "Link-Lite",
-    desc: "Custom URL shortener with analytics, easy copy/delete functionality, and a minimal interface. Built with performance in mind.",
-    image: "/projects/Link Lite Image.jpg",
-    live: "https://linklite.vercel.app",
-    github: "https://github.com/yourusername/link-lite",
-    stack: ["React.js", "TailwindCSS", "Express.js", "Hooks"]
   },
   {
     title: "Turbo Search",
@@ -40,11 +32,19 @@ const projects = [
     stack: ["Cloudflare Workers", "Redis", "Hono", "Next.js"]
   },
   {
+    title: "Link-Lite",
+    desc: "Custom URL shortener with analytics, easy copy/delete functionality, and a minimal interface. Built with performance in mind.",
+    image: "/projects/Link Lite Image.jpg",
+    live: "https://github.com/arnav-343-agarwal/Link-Lite.git",
+    github: "https://github.com/arnav-343-agarwal/Link-Lite.git",
+    stack: ["React.js", "TailwindCSS", "Express.js", "Hooks"]
+  },
+  {
     title: "2FA System",
     desc: "Secure Two-Factor Authentication system with Time based OTP & session management for login verification.",
     image: "/projects/Two Fa Image.jpg",
-    live: "https://2fa-demo.vercel.app",
-    github: "https://github.com/yourusername/two-factor-auth",
+    live: "https://github.com/arnav-343-agarwal/Two-FA-system.git",
+    github: "https://github.com/arnav-343-agarwal/Two-FA-system.git",
     stack: ["Express.js", "Passport", "Context Management", "JWT"]
   }
 ];
