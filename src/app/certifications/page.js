@@ -11,7 +11,7 @@ const certifications = [
     subtitle: "Course Topper – Top 5%",
     description:
       "Ranked in the top 5% nationally in a rigorous algorithmic course conducted by IIT. Covered complexity analysis, divide and conquer, dynamic programming, and more. Demonstrates strong grasp of algorithm design and optimization.",
-    proofLink: "https://example.com/nptel-proof",
+    proofLink: "https://drive.google.com/file/d/1_VHDgChJuMkyze9dM2cHqUHTxnNaDMMl/view?usp=sharing",
     img: "/certifications/nptel daa.png",
   },
   {
@@ -19,7 +19,7 @@ const certifications = [
     subtitle: "Stanford University",
     description:
       "One of the most renowned ML courses globally. Learned supervised and unsupervised learning, neural networks, SVMs, clustering, and best practices. Built a solid foundation for applied machine learning and data science.",
-    proofLink: "https://example.com/coursera-proof",
+    proofLink: "https://drive.google.com/file/d/1JEXl752vJQpHgBe8gTASYaufJVHdZb_U/view?usp=sharing",
     img: "/certifications/coursera ml.png",
   },
   {
@@ -27,7 +27,7 @@ const certifications = [
     subtitle: "Online Bootcamp",
     description:
       "Completed an extensive course covering frontend (React, Tailwind), backend (Node.js, Express), and databases (MongoDB). Built several real-world projects with modern tooling and deployment strategies.",
-    proofLink: "https://example.com/udemy-proof",
+    proofLink: "https://drive.google.com/file/d/1JCL0HqEm6iQUm9VbRsq73-B_hrNc3bUB/view?usp=sharing",
     img: "/certifications/udemy web.png",
   },
   {
@@ -35,7 +35,7 @@ const certifications = [
     subtitle: "NPTEL Certification",
     description:
       "Focused on core and advanced Java: OOP concepts, exception handling, GUI programming, file handling, and JDBC. Reinforced by graded assignments and proctored exams by IIT Kharagpur professors.",
-    proofLink: "https://example.com/java-proof",
+    proofLink: "https://drive.google.com/file/d/1ZJ0-VeefKjrlnJt5-6TkrNv_5ECsivVI/view?usp=sharing",
     img: "/certifications/nptel java.png",
   },
 ];
