@@ -10,9 +10,10 @@ import {
 import {
   SiJavascript, SiTypescript, SiMongodb, SiTailwindcss,
   SiRedux, SiRedis, SiExpress, SiNextdotjs,
-  SiTensorflow, SiPytorch
+  SiTensorflow, SiPytorch, SiC, SiCplusplus
 } from 'react-icons/si';
 import { CgWebsite } from 'react-icons/cg';
+import { FiExternalLink } from 'react-icons/fi';
 
 const webDev = {
   title: "Web Development",
@@ -36,7 +37,7 @@ const webDev = {
       ],
     },
     {
-      title: "Databases",
+      title: "Databases & Versioning",
       skills: [
         { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
         { name: "Redis", icon: SiRedis, color: "text-red-500" },
@@ -89,8 +90,8 @@ const languages = {
     {
       title: "Languages",
       skills: [
-        { name: "C++", icon: FaCode, color: "text-gray-500" },
-        { name: "C", icon: FaCode, color: "text-red-400" },
+        { name: "C++", icon: SiCplusplus, color: "text-blue-400" },
+        { name: "C", icon: SiC, color: "text-red-400" },
         { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
         { name: "Java", icon: FaJava, color: "text-blue-500" },
         { name: "Python", icon: FaPython, color: "text-yellow-300" },
@@ -114,8 +115,14 @@ const mlDl = {
     {
       title: "Applications",
       skills: [
-        { name: "Computer Vision", icon: FaBrain, color: "text-pink-400" },
-        { name: "NLP", icon: FaRobot, color: "text-violet-400" },
+        { name: "Linear Regression" },
+        { name: "Logistic Regression" },
+        { name: "Decision Trees" },
+        { name: "Naive Bayes" },
+        { name: "SVM" },
+        { name: "ANN / CNN / RNN" },
+        { name: "Hugging Face" },
+        { name: "Jupyter Notebook" },
       ],
     },
   ],
@@ -137,8 +144,11 @@ const SectionCard = ({ title, categories }) => (
             {category.skills.map((skill, i) => (
               skill.icon?.startsWith?.("/") ? (
                 <a key={i} href={skill.link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2">
-                  <img src={skill.icon} className="w-12 h-12 rounded" alt={skill.name} />
-                  <p className="text-white text-sm font-medium">{skill.name}</p>
+                  <img src={skill.icon} className="w-10 h-10 rounded" alt={skill.name} />
+                  <div className="flex items-center gap-1 text-white text-sm font-medium">
+                    {skill.name}
+                    <FiExternalLink className="text-white/70 text-xs" />
+                  </div>
                 </a>
               ) : (
                 <div key={i} className="flex flex-col items-center gap-2">
@@ -162,49 +172,24 @@ export default function SkillsPage() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="px-6 py-10 lg:px-20 space-y-10">
-      <h1 className="text-4xl font-bold text-center text-white mb-6">My Skills & Expertise</h1>
-      <TooltipProvider>
-        <div className="space-y-16">
-  
-          {/* Web Development Section */}
-          <div className="space-y-4">
-            <SectionCard title={webDev.title} categories={webDev.categories} />
-            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
-              With multiple full-stack projects under my belt, I’ve developed a strong grip on frontend and backend technologies. From crafting elegant UIs using Tailwind & React to building scalable APIs with Node.js and Express, I’m fully confident in delivering production-ready web apps.
-            </p>
+        <h1 className="text-4xl font-bold text-center text-white mb-6">My Skills & Expertise</h1>
+        <TooltipProvider>
+          <div className="space-y-16">
+            <div className="space-y-4">
+              <SectionCard title={webDev.title} categories={webDev.categories} />
+            </div>
+            <div className="space-y-4">
+              <SectionCard title={problemSolving.title} categories={problemSolving.categories} />
+            </div>
+            <div className="space-y-4">
+              <SectionCard title={languages.title} categories={languages.categories} />
+            </div>
+            <div className="space-y-4">
+              <SectionCard title={mlDl.title} categories={mlDl.categories} />
+            </div>
           </div>
-  
-          {/* Problem Solving Section */}
-          <div className="space-y-4">
-            <SectionCard title={problemSolving.title} categories={problemSolving.categories} />
-            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
-              DSA is my daily workout. With 350+ questions solved on LeetCode and deep dives into topics like DP, Trees, and Graphs, I’ve built a solid intuition for problem solving. It’s not just about getting the solution — it’s about thinking like an engineer.
-            </p>
-          </div>
-  
-          {/* Programming Languages Section */}
-          <div className="space-y-4">
-            <SectionCard title={languages.title} categories={languages.categories} />
-            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
-              I’ve coded in C, C++, Java, Python, and more — but C++ is my weapon of choice. Be it system-level programming or high-level scripting, I pick the best language for the task and write clean, efficient, and maintainable code every time.
-            </p>
-          </div>
-  
-          {/* ML/DL Section */}
-          <div className="space-y-4">
-            <SectionCard title={mlDl.title} categories={mlDl.categories} />
-            <p className="text-white/80 text-left max-w-5xl mx-auto text-sm md:text-base">
-              As a research intern on ML projects like Stable Diffusion optimization, I’ve worked hands-on with TensorFlow and PyTorch. I love applying AI in areas like CV and NLP, and I’m deeply fascinated by how machines can learn and adapt.
-            </p>
-          </div>
-  
-        </div>
-      </TooltipProvider>
-    </div>
+        </TooltipProvider>
+      </div>
     </motion.div>
-
   );
-  
 }
-
-

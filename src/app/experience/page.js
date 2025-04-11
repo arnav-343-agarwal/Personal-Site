@@ -7,15 +7,15 @@ const experiences = [
   {
     title: 'Samsung PRISM Research Internship',
     role: 'Research Intern – ML/AI (Stable Diffusion Optimization)',
-    duration: 'Feb 2024 – Present',
-    description: `Collaborated with Samsung engineers and faculty to optimize Stable Diffusion models using PyTorch and DeepCache. Focused on memory-efficient inference and computational graph tuning to enhance performance for real-world deployment.`,
+    duration: 'Jan 2024 – Aug 2024',
+    description: `Collaborated with Samsung engineers and faculty to improve Stable Diffusion models using DeepCache. Researched multiple academic papers and learned various machine learning and deep learning algorithms to focus on memory-efficient inference and optimizing computational graphs for better real-world performance.`,
     image: '/experience/Samsung logo.jpg', // Make sure this image exists in public/images/
   },
   {
     title: 'SRM IST Official Placement Issue Web App',
     role: 'Lead Developer',
-    duration: 'Jan 2024 – Present',
-    description: `Developed SRM’s official placement issue management system for students using Node.js, Express, MongoDB, and EJS. The app facilitates secure logins, detailed issue submissions, admin filtering, Excel downloads, and resolution tracking.`,
+    duration: 'Jan 2025 – Present',
+    description: `Currently developing SRM’s official placement issue management system for students using Next.js, TypeScript, Express, and MongoDB. The app supports secure logins, detailed issue submissions, admin-side filtering, Excel downloads, and resolution tracking.`,
     image: '/experience/srm logo.png', // Make sure this image exists in public/images/
   },
 ];
