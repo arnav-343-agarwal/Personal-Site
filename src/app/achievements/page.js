@@ -11,21 +11,21 @@ const achievements = [
     description:
       'Participated in Hackrush 1.0, a 36-hour hackathon, and secured runner-up position among 100+ teams. Built a real-time platform solving social good problems with modern tech stack and scalable backend.',
     image: '/achievements/hackrush.jpg',
-    proofLink: 'https://link-to-your-certificate.com',
+    proofLink: 'https://drive.google.com/file/d/1_O7g80cVWpJpdB08RkaW18-g2ZgGqOtE/view?usp=sharing',
   },
   {
-    title: 'JEE Advanced Achiever',
+    title: 'JEE Mains+Advanced Achiever',
     description:
       'Cracked one of the toughest engineering entrance exams in India. This demonstrates deep analytical thinking, mathematical ability, and perseverance. Scored 96.85 percentile in JEE Mains and qualified Advanced.',
     image: '/achievements/jee image.jpg',
-    proofLink: 'https://link-to-your-certificate.com',
+    proofLink: 'https://drive.google.com/file/d/1hc6cdzN9lqpm9gQcMpGLsAyAkE2SdF_j/view?usp=sharing',
   },
   {
     title: 'Problem-Solving Expert (400+ Qs)',
     description:
       'Solved over 400+ problems across platforms like Leetcode, GFG, and HackerRank. Strong grasp over algorithms, data structures, and time-space optimization. Regular contributor and contest participant.',
     image: '/achievements/leetcode image.png',
-    proofLink: 'https://leetcode.com/yourprofile',
+    proofLink: 'https://leetcode.com/u/Arnav343Agarwal/',
     isLeetcode: true,
   },
 ];

@@ -73,17 +73,17 @@ const problemSolving = {
         {
           name: "LeetCode (350+ Qs)",
           icon: "/icons/leetcode.png",
-          link: "https://leetcode.com/yourprofile"
+          link: "https://leetcode.com/u/Arnav343Agarwal/"
         },
         {
           name: "GeeksForGeeks",
           icon: "/icons/gfg icon.jpg",
-          link: "https://auth.geeksforgeeks.org/user/yourprofile"
+          link: "https://www.geeksforgeeks.org/user/agarwalar9hq8/"
         },
         {
           name: "HackerRank",
           icon: "/icons/HackerRank Icon.webp",
-          link: "https://www.hackerrank.com/yourprofile"
+          link: "https://leetcode.com/u/Arnav343Agarwal/"
         }
       ]
     }
