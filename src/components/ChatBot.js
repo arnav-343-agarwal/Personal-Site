@@ -19,8 +19,12 @@ export default function ChatBot() {
   }, []);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // Prevent scrolling on initial load
+    if (chat.length > 1 || isTyping) {
+      chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [chat, isTyping]);
+  
 
   const sendMessage = async () => {
     if (!input.trim()) return;
