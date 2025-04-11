@@ -15,29 +15,36 @@ export default function ContactPage() {
     message: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e) => {         
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // const handleSubmit = (e) => {    CURRENTLY NOT WORKING --- UNDER DEVELOPMENT
+  //   e.preventDefault();
+
+  //   const serviceId = 'your_service_id';
+  //   const templateId = 'your_template_id';
+  //   const userId = 'your_user_id';
+
+  //   emailjs
+  //     .send(serviceId, templateId, formData, userId)
+  //     .then((response) => {
+  //       console.log('Message sent successfully:', response);
+  //       alert('Your message has been sent successfully!');
+  //       setFormData({ name: '', email: '', message: '' });
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error sending message:', error);
+  //       alert('Failed to send the message. Please try again later.');
+  //     });
+  // };
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
+  alert(
+    "Hey! I'm currently working on getting the messaging feature up and running. Meanwhile, feel free to reach out to me directly at agarwalarnav2003@gmail.com. Thank you for your patience!"
+  );
+};
 
-    const serviceId = 'your_service_id';
-    const templateId = 'your_template_id';
-    const userId = 'your_user_id';
-
-    emailjs
-      .send(serviceId, templateId, formData, userId)
-      .then((response) => {
-        console.log('Message sent successfully:', response);
-        alert('Your message has been sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((error) => {
-        console.error('Error sending message:', error);
-        alert('Failed to send the message. Please try again later.');
-      });
-  };
 
   return (
     <motion.div

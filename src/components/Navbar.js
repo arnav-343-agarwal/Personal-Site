@@ -59,7 +59,7 @@ export default function Navbar() {
             className="bg-white text-black hover:bg-gray-200 transition"
           >
             <a
-              href="https://drive.google.com/file/d/YOUR_RESUME_ID/view"
+              href="https://drive.google.com/file/d/1sLeku01IT7iBFBDESsGr6ia_CNooHr_x/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
