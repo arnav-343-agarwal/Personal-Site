@@ -59,7 +59,7 @@ export default function Navbar() {
             className="bg-white text-black hover:bg-gray-200 transition"
           >
             <a
-              href="https://drive.google.com/file/d/1sLeku01IT7iBFBDESsGr6ia_CNooHr_x/view?usp=sharing"
+              href="https://drive.google.com/file/d/1OQKtncKeCFaVorM5tiq1Io1YTekyGIo8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
